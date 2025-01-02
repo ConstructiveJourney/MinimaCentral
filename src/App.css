@@ -1,0 +1,353 @@
+/* Global color variables */
+
+:root { /*  Actually, outerest-color has to be updated manually in index.css.  Also update in manifest.json, for while loading */
+	/* Coffee theme */
+	--outerest-color: #FCF8F8;
+	--outer-color: #BAAFAF;
+	--inner-color: #FCF8F8;
+	--innerest-color: #4F3F3F;
+	--highlight-color: #3C1111;
+
+	--dark-text-color: #3c1111;
+	--light-text-color: white;
+
+	--light-warning-color: red;
+	--dark-warning-color: firebrick;
+	}
+
+/* For EVERYTHING, globally */
+
+.App {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	min-height: 100vh;
+	width: 100%;
+	line-height: 120%;
+}
+
+/* Navigation bar */
+
+nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 2px;
+	margin-top: 2px;
+	width: 100%;
+	max-height: 32px;
+	height:auto;
+}
+.nav-left {
+	display: flex;
+	flex: 1;
+	justify-content: flex-start;
+	gap: inherit;
+	margin-left: 8px;
+	flex-wrap: nowrap;
+}
+.nav-right {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	margin-right: 8px;
+	flex-wrap: nowrap;
+}
+.nav-item {
+	border: none;
+	background-color: var(--outerest-color);
+	padding: 0;
+}
+.nav-left > .nav-item:hover {
+	transform: scale(1.2)
+}
+.nav-left img, .nav-right img, .nav-item {
+	object-fit: scale-down;
+	flex-shrink: 1;
+	max-height: 32px;
+	max-width: 100%;
+	width: auto;
+}
+
+/* Contains whichever page is switched in */
+.outer-container {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	width: 100%;
+	color: var(--dark-text-color);
+	font-size: 16px;
+	text-align: left;
+	accent-color: var(--highlight-color); /* Programming notes: for radio buttons etc. */
+}
+
+/* Each section, containing multiple items */
+section {
+	display: flex;
+	flex-direction: column;
+	/* flex-grow: 1; */
+	box-sizing: inherit;
+	max-width: 100%;
+	max-height: 100%;
+	overflow-wrap: anywhere;
+	gap: 8px;
+	margin: 8px;
+	border-radius: 6px;
+	border: none;
+	padding: 12px;
+	background-color: var(--outer-color);
+	color: var(--dark-text-color);
+}
+.sub-section {
+	display: flex;
+	flex-direction: column;
+	overflow-wrap: anywhere;
+	gap: 8px;
+}
+.section-to-row {
+	display: flex;
+	flex-direction: row;
+	box-sizing: inherit;
+	justify-content: flex-start;
+	max-width: 100%;
+	max-height: 100%;
+	overflow-wrap: anywhere;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+.section-to-col {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	justify-content: flex-start;
+	max-width: 100%;
+	max-height: 100%;
+	overflow-wrap: anywhere;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+/* Grouping items within a section, e.g. for an input */
+.panel {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	max-width: 100%;
+	max-height: 100%;
+	gap: 2px;
+	border-radius: 6px;
+	padding: 12px;
+	background-color: var(--inner-color);
+	color: var(--dark-text-color);
+	overflow-wrap: anywhere;
+	text-align: left;
+}
+.panel-to-row {
+	display: flex;
+	flex-direction: row;
+	box-sizing: inherit;
+	gap: 2px;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	overflow-wrap: anywhere;
+}
+
+.actual-token-panel {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	justify-content: flex-start; /* Main axis */
+	align-items: flex-start; /* Cross axis */
+}
+
+/* VIEWER, for viewing tokens */
+
+/* For individual tokens */
+.asset-card, .nohover-asset-card {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	text-align: center;
+	align-items: center;
+	/* margin: 4px; */
+	border-width: 2px;
+	padding: 2px;
+	color: white;
+}
+.asset-card:hover {
+	background-color: darkgray; /* FUTURE Think about implementing hover.  May require a fundamental re-write of card coloring system though. */
+}
+
+/* Lists */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+	list-style-type: none;
+}
+ol {
+	list-style-type: decimal;
+}
+.li-dot {
+	list-style-type: disc;
+}
+
+.small-token-image {
+	width: 100%;
+	height: auto;
+	max-height: 5vh;
+	max-width: 20vw;
+	object-fit: contain;
+	justify-self: center;
+}
+.big-token-image {
+	width:100%;
+	height: auto;
+	max-height: 50vh;
+	object-fit: contain;
+}
+.actual-token-image {
+	object-fit: none;
+}
+
+.info-img {
+	max-width: 24px;
+	max-height: 24px;
+}
+
+
+/* CREATOR, i.e. minting tokens */
+
+/* The label which goes with an input */
+.creator-label {
+	box-sizing: inherit;
+	display: flex;
+	flex-direction: column;
+}
+.creator-input {
+	box-sizing: inherit;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 4px;
+}
+
+
+/* Links */
+
+a {
+	color: var(--dark-text-color)
+}
+
+
+/* Buttons */
+
+input[type="file"], #file-input {
+	display: flex;
+	flex-direction: column;
+	box-sizing: inherit;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	overflow-wrap: anywhere;
+	width: 100%;
+}
+.general-button, .warning-button, input[type="file"] { /* Programming note: This covers the whole area, not just the button */
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	color: var(--dark-text-color);
+}
+.general-button, .warning-button, input[type="file"]::-webkit-file-upload-button {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	border-radius: 6px;
+	padding: 4px;
+	/* box-sizing: border-box; */
+}
+input[type="file"]::-webkit-file-upload-button {
+	margin-right: 0.5em;
+}
+.general-button, .warning-button, input[type="file"]::-webkit-file-upload-button, .help-button, .small-button {
+	border: none;
+	color: white;
+}
+.general-button, input[type="file"]::-webkit-file-upload-button, .help-button, .small-button {
+	background-color: var(--innerest-color);
+}
+.warning-button{
+	background-color: var(--light-warning-color);
+}
+.general-button, .warning-button, .help-button, .small-button {
+	margin: 0;
+}
+.general-button:hover, input[type="file"]::-webkit-file-upload-button:hover, .help-button:hover {
+	background-color: var(--highlight-color);
+}
+.warning-button:hover {
+	background-color: var(--dark-warning-color);
+}
+
+.helpText {
+	flex-direction: row;
+	white-space: pre-wrap;
+}
+.help-button, .small-button {
+	text-align: center;
+	line-height: inherit;
+	margin-left: 0.5em;
+}
+.help-button {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	align-self: center;
+}
+.small-button {
+	padding: 0px 3px 0px 3px;
+}
+
+select {
+	background-color: var(--outer-color);
+	color: var(--dark-text-color);
+	padding: 4px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	border-radius: 6px;
+}
+
+/* Overlay messages */
+
+.flash-message, .log {
+	position: fixed;
+	align-items: center;
+	background-color: gray;
+	color: white;
+	padding: 16px;
+	font-size: 100%;
+}
+.flash-message {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	overflow-wrap: anywhere;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 100vh;
+	width: 80%;
+	white-space: pre-wrap; /* Programming note: makes "\n" work as a newline. */
+}
+.flash-message > button {
+	font-size: 1em;
+}
+.log {
+	display: block;
+	width: 100%;
+	height: 5%; /* FUTURE Have this expand and contract according to what logged, with a max. height. */
+	bottom: 0;
+	overflow: hidden;
+}
