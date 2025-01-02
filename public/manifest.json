@@ -1,0 +1,15 @@
+{
+	"short_name": "M Central",
+	"name": "MinimaCentral Token Tool",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"type": "image/x-icon",
+			"sizes": "192x192"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#FCF8F8"
+}

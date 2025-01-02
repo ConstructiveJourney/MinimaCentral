@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta
+			name="description"
+			content="token tool for use with Minima blockchain"
+		/>
+		<title>M Central</title>
+		<% if (process.env.NODE_ENV === 'development' && process.env.REACT_APP_DEBUG === 'true') { %>
+			<script type="text/javascript">
+				var DEBUG = "%REACT_APP_DEBUG%";
+				var DEBUG_HOST = "%REACT_APP_DEBUG_HOST%";
+				var DEBUG_PORT = "%REACT_APP_DEBUG_PORT%";
+				var DEBUG_UID = "%REACT_APP_DEBUG_UID%";
+			</script>
+		<% } %>
+		<script defer src="%PUBLIC_URL%/mds.js"></script>
+	</head>
+	
+	<body>
+    	<noscript>You need to enable JavaScript to run this app.</noscript>
+    	<div id = "root" class = "root"></div>
+		<!--
+		This HTML file is a template.
+		If you open it directly in the browser, you will see an empty page.
+		-->
+	</body>
+
+</html>
