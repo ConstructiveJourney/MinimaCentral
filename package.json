@@ -1,0 +1,52 @@
+{
+	"//": "@babel line added by DM as workaround advised on running npm run build.",
+	"name": "mcentral",
+	"version": "2.1.0",
+	"private": true,
+	"homepage": ".",
+	"proxy": "http://127.0.0.1:9003",
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.3.0",
+		"@testing-library/user-event": "^13.5.0",
+		"async-mutex": "^0.5.0",
+		"gulp": "^5.0.0",
+		"gulp-zip": "^5.1.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-image-file-resizer": "^0.4.8",
+		"react-mutex": "^0.1.2",
+		"react-scripts": "5.0.1",
+		"sanitize-html": "^2.13.0",
+		"web-vitals": "^2.1.4"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"zip": "gulp"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-zip": "^5.1.0"
+	}
+}
